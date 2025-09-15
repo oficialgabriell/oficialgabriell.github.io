@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   retina_detect: true
 });
 
-  // Objeto que armazena descrições das skills
-const skillTexts = {
+  const skillTexts = {
   html: "HTML é a base da web. Permite estruturar conteúdos e definir semântica, essencial para acessibilidade e SEO.",
   css: "CSS dá estilo e identidade às interfaces. Impacta diretamente na experiência do usuário e na usabilidade.",
   js: "JavaScript traz interatividade e dinamismo. É fundamental para criar aplicações web responsivas e funcionais.",
@@ -56,24 +55,23 @@ const skillTexts = {
   git: "Git/GitHub garantem versionamento, colaboração e rastreabilidade no desenvolvimento em equipe."
 };
 
-// Seleciona todas as skills e o container de info
-const skills = document.querySelectorAll(".skill");
-const skillInfo = document.getElementById("skill-info");
+const skillItems = document.querySelectorAll(".skill-item");
 
-// Função que atualiza o texto ao clicar
-skills.forEach(skill => {
-  skill.addEventListener("click", () => {
-    const key = skill.dataset.skill;
-    // animação suave de fade
-    skillInfo.style.opacity = "0";
-
-    setTimeout(() => {
-      skillInfo.innerHTML = `<p><strong>${skill.textContent}:</strong> ${skillTexts[key] || "Descrição não disponível."}</p>`;
-      skillInfo.style.opacity = "1";
-    }, 300);
+skillItems.forEach(item => {
+  item.addEventListener("click", () => {
+    // Remove a classe active de todos
+    skillItems.forEach(i => i.classList.remove("active"));
+    
+    const key = item.dataset.skill;
+    item.querySelector(".skill-info").textContent = skillTexts[key] || "Descrição não disponível.";
+    
+    // Adiciona a classe active só no item clicado
+    item.classList.add("active");
   });
 });
 
 
+
 });
+
 
