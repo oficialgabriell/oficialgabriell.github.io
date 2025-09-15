@@ -111,14 +111,17 @@ section p { max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; }
 }
 
 .skill-info {
-  margin-top: 8px;
-  font-size: 0.85rem;
-  line-height: 1.3;
-  min-height: 40px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #0d1b2a;
   color: #fff;
+  border-radius: 8px;
+  min-height: 50px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: all 0.3s ease;
 }
+
 
 /* Visível quando ativo */
 .skill-item.active .skill-info {
@@ -150,5 +153,6 @@ section p { max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; }
 footer { text-align: center; padding: 15px; background: var(--bg-panel); }
 
 h1 { font-size: 48px; font-family: "Segoe UI", Roboto, Arial, sans-serif; margin-bottom: 15px; }
+
 
 
