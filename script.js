@@ -55,23 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
   git: "Git/GitHub garantem versionamento, colaboração e rastreabilidade no desenvolvimento em equipe."
 };
 
-const skillItems = document.querySelectorAll(".skill-item");
+// Seleciona todas as skills e o container de info
+const skills = document.querySelectorAll(".skill");
+const skillInfo = document.getElementById("skill-info");
 
-skillItems.forEach(item => {
-  item.addEventListener("click", () => {
-    // Remove a classe active de todos
-    skillItems.forEach(i => i.classList.remove("active"));
-    
-    const key = item.dataset.skill;
-    item.querySelector(".skill-info").textContent = skillTexts[key] || "Descrição não disponível.";
-    
-    // Adiciona a classe active só no item clicado
-    item.classList.add("active");
+skills.forEach(skill => {
+  skill.addEventListener("click", () => {
+    const key = skill.dataset.skill;
+    // Atualiza o conteúdo do skill-info
+    skillInfo.innerHTML = `<p><strong>${skill.textContent}:</strong> ${skillTexts[key] || "Descrição não disponível."}</p>`;
   });
 });
 
 
 
+
 });
+
 
 
