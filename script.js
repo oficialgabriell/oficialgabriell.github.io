@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
   retina_detect: true
 });
 
-  document.addEventListener("DOMContentLoaded", () => {
-  const skillTexts = {
+   document.addEventListener("DOMContentLoaded", () => {
+    const skillTexts = {
     html: "HTML é a base da web. Permite estruturar conteúdos e definir semântica, essencial para acessibilidade e SEO.",
     css: "CSS dá estilo e identidade às interfaces. Impacta diretamente na experiência do usuário e na usabilidade.",
     js: "JavaScript traz interatividade e dinamismo. É fundamental para criar aplicações web responsivas e funcionais.",
@@ -62,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   skills.forEach(skill => {
     skill.addEventListener("click", () => {
       const key = skill.dataset.skill;
-      skillInfo.innerHTML = `<p><strong>${skill.textContent}:</strong> ${skillTexts[key] || "Descrição não disponível."}</p>`;
-      skillInfo.classList.add("visible");
+      skillInfo.innerHTML = `<p><strong>${skill.textContent}:</strong> ${skillTexts[key]}</p>`;
     });
   });
 });
@@ -72,7 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
 });
+
 
 
 
