@@ -119,14 +119,14 @@ section p { max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; }
   min-height: 50px;
   font-size: 0.95rem;
   line-height: 1.4;
-  transition: all 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-
-/* Visível quando ativo */
-.skill-item.active .skill-info {
+.skill-info.visible {
   opacity: 1;
 }
+
 
 
 
@@ -153,6 +153,7 @@ section p { max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; }
 footer { text-align: center; padding: 15px; background: var(--bg-panel); }
 
 h1 { font-size: 48px; font-family: "Segoe UI", Roboto, Arial, sans-serif; margin-bottom: 15px; }
+
 
 
 
