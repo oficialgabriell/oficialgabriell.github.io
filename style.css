@@ -105,6 +105,42 @@ section p { max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; }
   background: linear-gradient(135deg, #0096c7, #00b4d8); /* efeito gradiente invertido */
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.skill {
+  padding: 8px 12px;
+  background: #1b263b;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.skill:hover {
+  background: #00b4d8;
+  transform: scale(1.05);
+}
+
+.skill-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: #0d1b2a;
+  color: #fff;
+  border-radius: 10px;
+  min-height: 60px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
 
 #contato form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 12px; }
 #contato input, #contato textarea { padding: 10px; border-radius: 6px; border: none; background: var(--bg-dark); color: var(--text-light); }
@@ -128,3 +164,4 @@ section p { max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; }
 footer { text-align: center; padding: 15px; background: var(--bg-panel); }
 
 h1 { font-size: 48px; font-family: "Segoe UI", Roboto, Arial, sans-serif; margin-bottom: 15px; }
+
