@@ -119,17 +119,8 @@ section p { max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; }
   min-height: 50px;
   font-size: 0.95rem;
   line-height: 1.4;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
-.skill-info.visible {
-  opacity: 1;
-}
-
-
-
-
 
 #contato form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 12px; }
 #contato input, #contato textarea { padding: 10px; border-radius: 6px; border: none; background: var(--bg-dark); color: var(--text-light); }
@@ -153,6 +144,7 @@ section p { max-width: 700px; margin: auto; font-size: 18px; line-height: 1.6; }
 footer { text-align: center; padding: 15px; background: var(--bg-panel); }
 
 h1 { font-size: 48px; font-family: "Segoe UI", Roboto, Arial, sans-serif; margin-bottom: 15px; }
+
 
 
 
