@@ -46,31 +46,34 @@ document.addEventListener('DOMContentLoaded', () => {
   retina_detect: true
 });
 
+  document.addEventListener("DOMContentLoaded", () => {
   const skillTexts = {
-  html: "HTML é a base da web. Permite estruturar conteúdos e definir semântica, essencial para acessibilidade e SEO.",
-  css: "CSS dá estilo e identidade às interfaces. Impacta diretamente na experiência do usuário e na usabilidade.",
-  js: "JavaScript traz interatividade e dinamismo. É fundamental para criar aplicações web responsivas e funcionais.",
-  react: "React é uma biblioteca poderosa para construir interfaces modernas e escaláveis, valorizada em times ágeis.",
-  sheets: "Google Sheets, aliado ao App Script, permite automações e integrações rápidas, útil em processos de dados.",
-  git: "Git/GitHub garantem versionamento, colaboração e rastreabilidade no desenvolvimento em equipe."
-};
+    html: "HTML é a base da web. Permite estruturar conteúdos e definir semântica, essencial para acessibilidade e SEO.",
+    css: "CSS dá estilo e identidade às interfaces. Impacta diretamente na experiência do usuário e na usabilidade.",
+    js: "JavaScript traz interatividade e dinamismo. É fundamental para criar aplicações web responsivas e funcionais.",
+    react: "React é uma biblioteca poderosa para construir interfaces modernas e escaláveis, valorizada em times ágeis.",
+    sheets: "Google Sheets, aliado ao App Script, permite automações e integrações rápidas, útil em processos de dados.",
+    git: "Git/GitHub garantem versionamento, colaboração e rastreabilidade no desenvolvimento em equipe."
+  };
 
-// Seleciona todas as skills e o container de info
-const skills = document.querySelectorAll(".skill");
-const skillInfo = document.getElementById("skill-info");
+  const skills = document.querySelectorAll(".skill");
+  const skillInfo = document.getElementById("skill-info");
 
-skills.forEach(skill => {
-  skill.addEventListener("click", () => {
-    const key = skill.dataset.skill;
-    // Atualiza o conteúdo do skill-info
-    skillInfo.innerHTML = `<p><strong>${skill.textContent}:</strong> ${skillTexts[key] || "Descrição não disponível."}</p>`;
+  skills.forEach(skill => {
+    skill.addEventListener("click", () => {
+      const key = skill.dataset.skill;
+      skillInfo.innerHTML = `<p><strong>${skill.textContent}:</strong> ${skillTexts[key] || "Descrição não disponível."}</p>`;
+      skillInfo.classList.add("visible");
+    });
   });
 });
 
 
 
 
+
 });
+
 
 
 
